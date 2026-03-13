@@ -1,112 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>97711V Pegasus Prime | Precision Robotics</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <header>
-        <a href="index.html" class="logo">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="var(--text-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M2 17L12 22L22 17" stroke="var(--accent-color)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M2 12L12 17L22 12" stroke="var(--border-hover)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-            97711V <span>PRIME</span>
-        </a>
-        <ul class="nav-links">
-            <li><a href="index.html" class="active">Overview</a></li>
-            <li><a href="build.html">Hardware</a></li>
-            <li><a href="code.html">Logic</a></li>
-            <li><a href="outreach.html">Impact</a></li>
-        </ul>
-    </header>
-
-    <main>
-        <!-- Hero Section -->
-        <section class="hero">
-            <div class="hero-badge animate-on-scroll">V5RC SEASON 2025-2026</div>
-            <h1 class="animate-on-scroll" style="transition-delay: 100ms;">Precision in Motion.</h1>
-            <p class="animate-on-scroll" style="transition-delay: 200ms;">We are an independent VEX V5 robotics team engineering high-traction, high-consistency autonomous platforms for the Push Back season.</p>
-            <div class="cta-group animate-on-scroll" style="transition-delay: 300ms;">
-                <a href="build.html" class="btn btn-primary">Explore Zephyr</a>
-                <a href="outreach.html" class="btn btn-secondary">Our Impact</a>
-            </div>
-        </section>
-
-        <!-- Technical Highlights -->
-        <section id="highlights">
-            <div class="section-header animate-on-scroll">
-                <h2 class="section-title">Engineered to Win.</h2>
-                <p class="section-subtitle">Every component, from the geared drive to the PID logic, is optimized for peak performance.</p>
-            </div>
-            
-            <div class="grid">
-                <div class="card animate-on-scroll">
-                    <div class="card-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-                    </div>
-                    <h3>High-Torque Drive</h3>
-                    <p>6-Motor 450 RPM geared drivetrain provides unmatched pushing power and traversal speed across the field.</p>
-                </div>
-                <div class="card animate-on-scroll" style="transition-delay: 100ms;">
-                    <div class="card-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242M12 12v9"/><path d="m8 17 4 4 4-4"/></svg>
-                    </div>
-                    <h3>Absolute Control</h3>
-                    <p>Heavily tuned PID loops written in PROS C++ eliminate hardware variance, ensuring perfect autonomous routes.</p>
-                </div>
-                <div class="card animate-on-scroll" style="transition-delay: 200ms;">
-                    <div class="card-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-                    </div>
-                    <h3>Community First</h3>
-                    <p>We actively distribute hardware and host control theory workshops to elevate the competitive standard of our region.</p>
-                </div>
-            </div>
-
-            <!-- Telemetry / Data Table -->
-            <div class="telemetry-container animate-on-scroll" style="margin-top: 5rem;">
-                <div class="telemetry-header">
-                    <div class="telemetry-title">Platform Telemetry</div>
-                    <div class="status-indicator">
-                        <div class="status-dot"></div>
-                        SYS_OPTIMAL
-                    </div>
-                </div>
-                <div class="telemetry-grid">
-                    <div class="telemetry-item">
-                        <div class="telemetry-label">Win Rate</div>
-                        <div class="telemetry-value highlight">85.7%</div>
-                        <div class="telemetry-label" style="margin-top: 8px;">12W - 2L</div>
-                    </div>
-                    <div class="telemetry-item">
-                        <div class="telemetry-label">Skills Score</div>
-                        <div class="telemetry-value" style="color: var(--accent-gold);">245</div>
-                        <div class="telemetry-label" style="margin-top: 8px;">Regional #1</div>
-                    </div>
-                    <div class="telemetry-item">
-                        <div class="telemetry-label">PID Settle</div>
-                        <div class="telemetry-value">142ms</div>
-                        <div class="telemetry-label" style="margin-top: 8px;">Target Variance < 1%</div>
-                    </div>
-                    <div class="telemetry-item">
-                        <div class="telemetry-label">Donations</div>
-                        <div class="telemetry-value">>$500</div>
-                        <div class="telemetry-label" style="margin-top: 8px;">Active Program</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="footer-brand">97711V PRIME</div>
-        <div>&copy; 2026 Pegasus Prime. Independent VEX V5 Team.</div>
-    </footer>
-
-    <script src="js/main.js?v=3"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pegasus Prime 97711V</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@400;600;800&family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
