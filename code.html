@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>97711V | Logic & PID</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="brand">
+                97711V<span>//</span>PRIME
+            </div>
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link">Dashboard <span>_00</span></a>
+                <a href="build.html" class="nav-link">Hardware Build <span>_01</span></a>
+                <a href="code.html" class="nav-link active">Logic & PID <span>_02</span></a>
+                <a href="outreach.html" class="nav-link">Community <span>_03</span></a>
+            </nav>
+            <div style="margin-top: auto; color: var(--text-muted); font-size: 0.8rem; font-family: var(--font-mono);">
+                SYS.V5RC // ACTIVE
+            </div>
+        </aside>
+
+        <!-- Main Dashboard Area -->
+        <main class="main-content">
+            <header class="header">
+                <h1 class="header-title">Software Engineering</h1>
+                <div class="status-badge" style="color: var(--accent-cyan); border-color: rgba(34, 211, 238, 0.2); background: rgba(34, 211, 238, 0.1);">
+                    KERNEL: PROS C++
+                </div>
+            </header>
+
+            <div class="bento-grid">
+                <!-- PID Notes -->
+                <div class="panel panel-hero">
+                    <div class="panel-header">Math Notes // Custom PID Control</div>
+                    <h2 style="font-size: 1.5rem; margin-bottom: 1rem;">Proportional-Integral-Derivative</h2>
+                    <p style="color: var(--text-muted); margin-bottom: 1rem;">
+                        Our autonomous routines rely on heavily tuned PID loops to ensure exact positioning regardless of battery voltage or field friction. 
+                    </p>
+                    <div class="terminal" style="font-size: 0.9rem; margin-top: 1rem;">
+                        error = target - current_position;<br>
+                        integral += error;<br>
+                        derivative = error - previous_error;<br>
+                        <br>
+                        motor_power = (kP * error) + (kI * integral) + (kD * derivative);<br>
+                        previous_error = error;
+                    </div>
+                </div>
+
+                <!-- GitHub Link / Status -->
+                <div class="panel panel-stat">
+                    <div class="panel-header">Repository</div>
+                    <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem;">Open Source</h3>
+                    <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1rem;">
+                        We believe in sharing knowledge. Parts of our control logic are available for other teams to study.
+                    </p>
+                    <a href="#" style="color: var(--accent-cyan); font-family: var(--font-mono); text-decoration: none; font-size: 0.9rem;">> view_github_repo</a>
+                </div>
+
+                <!-- PID Output Chart Placeholder -->
+                <div class="panel panel-stat">
+                    <div class="panel-header">Tuning Graph</div>
+                    <div style="height: 150px; border: 1px dashed var(--accent-gold); border-radius: 4px; display: flex; align-items: center; justify-content: center; color: var(--accent-gold); font-family: var(--font-mono); background: rgba(250, 204, 21, 0.05);">
+                        [ PID SETTLE CHART ]
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>

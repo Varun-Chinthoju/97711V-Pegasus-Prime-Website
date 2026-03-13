@@ -3,58 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>97711V | Pegasus Prime</title>
+    <title>97711V | Command Center</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="blob gold-blob"></div>
-    <div class="blob" style="bottom: -100px; left: -100px;"></div>
-
-    <nav>
-        <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="robot.html">Robot</a>
-            <a href="competition.html">Competition</a>
-            <a href="outreach.html">Outreach</a>
-        </div>
-    </nav>
-
-    <main>
-        <!-- Hero Section -->
-        <section>
-            <h2 style="color: var(--prime-gold); font-size: 1.5rem; letter-spacing: 2px; margin-bottom: 1rem;">97711V</h2>
-            <h1 class="hero-title">Pegasus Prime.</h1>
-            <p class="hero-subtitle">Engineering the next generation of V5 robotics with precision and liquid-smooth logic.</p>
-            <div style="display: flex; gap: 30px;">
-                <a href="robot.html" class="cta-link">Meet Zephyr</a>
-                <a href="competition.html" class="cta-link">See the Season</a>
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="brand">
+                97711V<span>//</span>PRIME
             </div>
-        </section>
-
-        <!-- Product Focus Style Section -->
-        <section style="background: #000;">
-            <div class="glass-card">
-                <h2 style="font-size: 3rem; margin-bottom: 1rem;">Zephyr.</h2>
-                <p style="font-size: 1.5rem; color: var(--text-secondary); margin-bottom: 2rem;">A masterclass in independent robotics. 6-Motor power. Custom PID control. Unrivaled consistency.</p>
-                <a href="robot.html" class="cta-link">Technical Specs</a>
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link active">Dashboard <span>_00</span></a>
+                <a href="build.html" class="nav-link">Hardware Build <span>_01</span></a>
+                <a href="code.html" class="nav-link">Logic & PID <span>_02</span></a>
+                <a href="outreach.html" class="nav-link">Community <span>_03</span></a>
+            </nav>
+            <div style="margin-top: auto; color: var(--text-muted); font-size: 0.8rem; font-family: var(--font-mono);">
+                SYS.V5RC // ACTIVE
             </div>
-        </section>
+        </aside>
 
-        <!-- Mission Section -->
-        <section>
-            <h2 class="hero-title" style="font-size: 5rem;">Designed for impact.</h2>
-            <p class="hero-subtitle">From donating hardware to local teams to demonstrating the elegance of PID control, we believe in lifting the entire community.</p>
-            <a href="outreach.html" class="cta-link">Our Outreach</a>
-        </section>
-    </main>
+        <!-- Main Dashboard Area -->
+        <main class="main-content">
+            <header class="header">
+                <h1 class="header-title">Virtual Pit Dashboard</h1>
+                <div class="status-badge">ROBOT: ZEPHYR_ONLINE</div>
+            </header>
 
-    <footer style="padding: 100px 20px; text-align: center; color: var(--text-secondary); font-size: 12px;">
-        <p>Copyright &copy; 2026 97711V Pegasus Prime. All rights reserved.</p>
-    </footer>
+            <div class="bento-grid">
+                <!-- Hero CAD/Robot Panel -->
+                <div class="panel panel-hero">
+                    <div class="panel-header">Platform Status</div>
+                    <h2 style="font-size: 2rem; margin-bottom: 1rem;">Zephyr V5</h2>
+                    <p style="color: var(--text-muted); max-width: 600px; margin-bottom: 2rem;">
+                        Our 2025-2026 'Push Back' competitive entry. Engineered for consistent scoring and high-traction maneuverability.
+                    </p>
+                    <div style="flex: 1; border: 1px dashed var(--accent-cyan); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--accent-cyan); font-family: var(--font-mono); background: rgba(34, 211, 238, 0.05);">
+                        [ INTERACTIVE CAD MODEL PLACEHOLDER ]
+                    </div>
+                </div>
 
+                <!-- Stats Panels -->
+                <div class="panel panel-stat">
+                    <div class="panel-header">Win Rate</div>
+                    <div class="data-value cyan">85.7%</div>
+                    <div class="data-label">12 W - 2 L</div>
+                </div>
+
+                <div class="panel panel-stat">
+                    <div class="panel-header">Skills High Score</div>
+                    <div class="data-value gold">245</div>
+                    <div class="data-label">Current Regional #1</div>
+                </div>
+
+                <!-- Latest Intel -->
+                <div class="panel panel-wide" style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+                    <div>
+                        <div class="panel-header">Latest Push</div>
+                        <div class="terminal">
+                            > git commit -m "feat: tuned PID for inverted pendulum"<br>
+                            > [main a1b2c3d] 1 file changed, 15 insertions(+)<br>
+                            > Status: Deployed to Cortex
+                        </div>
+                    </div>
+                    <div>
+                        <div class="panel-header">Community Impact</div>
+                        <p style="color: var(--text-muted); font-size: 0.95rem;">
+                            Recent workshop: "Power of PID" completed.<br>
+                            Part Donations: Active ($500+ distributed).
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
     <script src="js/main.js"></script>
 </body>
 </html>
