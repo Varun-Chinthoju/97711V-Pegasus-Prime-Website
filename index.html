@@ -7,52 +7,55 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="aura aura-blue"></div>
-    <div class="aura aura-gold"></div>
-
-    <div class="container">
-        <nav>
-            <a href="index.html" class="brand">97711V<span> // </span>PRIME</a>
-            <div class="nav-links">
-                <a href="index.html" class="active">Overview</a>
-                <a href="build.html">Build</a>
-                <a href="code.html">Code</a>
-                <a href="outreach.html">Impact</a>
-            </div>
-        </nav>
+    <div class="wrapper">
+        <header>
+            <div class="brand">97711V // <span>PRIME</span></div>
+            <nav>
+                <a href="index.html" class="active">00_OVERVIEW</a>
+                <a href="build.html">01_BUILD</a>
+                <a href="code.html">02_CODE</a>
+                <a href="outreach.html">03_IMPACT</a>
+            </nav>
+            <div style="padding: 20px; font-family: var(--font-mono); font-size: 11px;">V5RC_V.2026</div>
+        </header>
 
         <main>
             <section class="hero">
-                <span class="sys-tag">SYS.V5RC // ACTIVE</span>
+                <span class="sys-info">SYSTEM_STATUS: ACTIVE</span>
                 <h1>Zephyr.</h1>
-                <p class="hero-p">Our 2025-2026 'Push Back' competitive entry. Engineered for consistent scoring and high-traction maneuverability. A masterclass in independent robotics.</p>
             </section>
 
-            <div class="dashboard-grid">
-                <div class="glass-panel">
-                    <div class="panel-label">Win Rate</div>
-                    <div class="data-large" style="color: var(--zephyr-blue);">85.7%</div>
-                    <div class="data-sub">12 Wins — 2 Losses</div>
+            <div class="info-grid">
+                <div class="info-block">
+                    <div class="label">Primary_Objective</div>
+                    <div class="desc">Engineering the next generation of V5 robotics with precision and liquid-smooth logic. Our 2025-2026 'Push Back' competitive entry.</div>
                 </div>
-                <div class="glass-panel">
-                    <div class="panel-label">Skills High Score</div>
-                    <div class="data-large" style="color: var(--prime-gold);">245</div>
-                    <div class="data-sub">Current Regional #1</div>
+                <div class="info-block">
+                    <div class="label">Win_Rate</div>
+                    <div class="value">85.7%</div>
+                    <div class="desc">12 Wins — 2 Losses. Regional Qualifier Performance.</div>
+                </div>
+                <div class="info-block">
+                    <div class="label">Skills_Score</div>
+                    <div class="value" style="color: var(--accent);">245</div>
+                    <div class="desc">Current Regional #1 standing. Optimized for high-traction maneuverability.</div>
                 </div>
             </div>
 
-            <div class="glass-panel" style="height: 500px; display: flex; align-items: center; justify-content: center; margin-bottom: 30px;">
-                <div class="panel-label" style="position: absolute; top: 40px; left: 40px;">Engineering Preview</div>
-                <span style="font-family: var(--font-mono); color: var(--text-dim); opacity: 0.5;">[ INTERACTIVE CAD MODEL PLACEHOLDER ]</span>
+            <div class="display-panel">
+                <div class="label" style="margin-bottom: 10px;">Engineering_Preview</div>
+                <div class="placeholder">
+                    [ INTERACTIVE_CAD_MODEL_PLACEHOLDER ]
+                </div>
             </div>
         </main>
 
         <footer>
-            <span>&copy; 2026 97711V Pegasus Prime.</span>
-            <span>Independent VEX V5 Team</span>
+            <div>&copy; 2026 PEGASUS PRIME</div>
+            <div>INDEPENDENT VEX V5 TEAM</div>
+            <div>LOC: AURORA_NEXUS</div>
         </footer>
     </div>
-
     <script src="js/main.js"></script>
 </body>
 </html>

@@ -6,57 +6,70 @@
     <title>Code | 97711V Pegasus Prime</title>
     <link rel="stylesheet" href="css/style.css">
     <style>
-        .code-block {
+        .code-container {
+            padding: 20px;
+            background: #050505;
+            border: 1px solid var(--border);
             font-family: var(--font-mono);
-            font-size: 16px;
-            color: var(--zephyr-blue);
-            line-height: 1.8;
-            background: rgba(0,0,0,0.3);
-            padding: 40px;
-            border-radius: 20px;
-            border: 1px solid var(--glass-border);
-            margin-top: 40px;
+            font-size: 14px;
+            color: var(--accent);
+            line-height: 1.6;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
-    <div class="aura aura-blue"></div>
-    <div class="aura aura-gold"></div>
-
-    <div class="container">
-        <nav>
-            <a href="index.html" class="brand">97711V<span> // </span>PRIME</a>
-            <div class="nav-links">
-                <a href="index.html">Overview</a>
-                <a href="build.html">Build</a>
-                <a href="code.html" class="active">Code</a>
-                <a href="outreach.html">Impact</a>
-            </div>
-        </nav>
+    <div class="wrapper">
+        <header>
+            <div class="brand">97711V // <span>PRIME</span></div>
+            <nav>
+                <a href="index.html">00_OVERVIEW</a>
+                <a href="build.html">01_BUILD</a>
+                <a href="code.html" class="active">02_CODE</a>
+                <a href="outreach.html">03_IMPACT</a>
+            </nav>
+            <div style="padding: 20px; font-family: var(--font-mono); font-size: 11px;">V5RC_V.2026</div>
+        </header>
 
         <main>
             <section class="hero">
-                <span class="sys-tag">LOGIC // PROS C++</span>
-                <h1>Software.</h1>
-                <p class="hero-p">Our autonomous routines rely on heavily tuned PID loops to ensure exact positioning regardless of battery voltage or field friction. It's about eliminating variance.</p>
+                <span class="sys-info">KERNEL_SPEC: PROS_C++</span>
+                <h1>The Logic.</h1>
             </section>
 
-            <div class="glass-panel">
-                <div class="panel-label">Math Notes // Custom PID Control</div>
-                <div class="code-block">
-                    error = target - current_position;<br>
-                    integral += error;<br>
-                    derivative = error - previous_error;<br>
-                    <br>
-                    motor_power = (kP * error) + (kI * integral) + (kD * derivative);<br>
-                    previous_error = error;
+            <div class="info-grid">
+                <div class="info-block" style="grid-column: span 3;">
+                    <div class="label">Control_Theory // PID_Loop</div>
+                    <div class="desc">Our autonomous routines rely on heavily tuned PID loops to ensure exact positioning regardless of battery voltage or field friction. It's about eliminating variance in competitive environments.</div>
+                    <div class="code-container">
+                        error = target - current_position;<br>
+                        integral += error;<br>
+                        derivative = error - previous_error;<br>
+                        <br>
+                        motor_power = (kP * error) + (kI * integral) + (kD * derivative);<br>
+                        previous_error = error;
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-grid">
+                <div class="info-block">
+                    <div class="label">Version_Control</div>
+                    <div class="value" style="font-size: 20px;">Git_Automated</div>
+                    <div class="desc">Continuous deployment to V5 Cortex.</div>
+                </div>
+                <div class="info-block" style="grid-column: span 2;">
+                    <div class="label">Open_Source</div>
+                    <div class="value" style="font-size: 20px;">Public_Repository</div>
+                    <div class="desc">We believe in sharing knowledge. Parts of our control logic are available for study. [ VIEW_ON_GITHUB ]</div>
                 </div>
             </div>
         </main>
 
-        <footer style="margin-top: 80px;">
-            <span>&copy; 2026 97711V Pegasus Prime.</span>
-            <span>Independent VEX V5 Team</span>
+        <footer>
+            <div>&copy; 2026 PEGASUS PRIME</div>
+            <div>INDEPENDENT VEX V5 TEAM</div>
+            <div>LOC: AURORA_NEXUS</div>
         </footer>
     </div>
 </body>

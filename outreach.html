@@ -7,54 +7,53 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="aura aura-blue"></div>
-    <div class="aura aura-gold"></div>
-
-    <div class="container">
-        <nav>
-            <a href="index.html" class="brand">97711V<span> // </span>PRIME</a>
-            <div class="nav-links">
-                <a href="index.html">Overview</a>
-                <a href="build.html">Build</a>
-                <a href="code.html">Code</a>
-                <a href="outreach.html" class="active">Impact</a>
-            </div>
-        </nav>
+    <div class="wrapper">
+        <header>
+            <div class="brand">97711V // <span>PRIME</span></div>
+            <nav>
+                <a href="index.html">00_OVERVIEW</a>
+                <a href="build.html">01_BUILD</a>
+                <a href="code.html">02_CODE</a>
+                <a href="outreach.html" class="active">03_IMPACT</a>
+            </nav>
+            <div style="padding: 20px; font-family: var(--font-mono); font-size: 11px;">V5RC_V.2026</div>
+        </header>
 
         <main>
             <section class="hero">
-                <span class="sys-tag">COMMUNITY // OUTREACH</span>
-                <h1>Impact Radius.</h1>
-                <p class="hero-p">Building hardware is only half the mission. We ensure that our resources, knowledge, and passion actively raise the standard for the entire region.</p>
+                <span class="sys-info">MISSION_OBJ: COMMUNITY_UP LIFT</span>
+                <h1>The Impact.</h1>
             </section>
 
-            <div class="dashboard-grid">
-                <div class="glass-panel">
-                    <div class="panel-label">Donations</div>
-                    <div class="data-large" style="color: var(--accent-green);">&gt;$500</div>
-                    <div class="data-sub">C-Channels, motors, and sensors distributed to local rookie teams.</div>
+            <div class="info-grid">
+                <div class="info-block">
+                    <div class="label">Resource_Sharing</div>
+                    <div class="value" style="color: var(--accent);">&gt;$500</div>
+                    <div class="desc">VEX hardware donated to rookie teams. Ensuring that hardware access is never a barrier to entry in competitive robotics.</div>
                 </div>
-                <div class="glass-panel">
-                    <div class="panel-label">Initiative</div>
-                    <div class="data-large" style="color: var(--zephyr-blue);">Pendulum</div>
-                    <div class="data-sub">Custom PID Inverted Pendulum demo used in community workshops.</div>
+                <div class="info-block" style="grid-column: span 2;">
+                    <div class="label">Educational_Project</div>
+                    <div class="value">Inverted_Pendulum</div>
+                    <div class="desc">A custom-built control theory demo used in regional workshops to teach the practical applications of PID logic to students.</div>
                 </div>
             </div>
 
-            <div class="glass-panel" style="margin-top: 30px;">
-                <div class="panel-label">Mission Gallery</div>
-                <div id="outreach-gallery" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1rem; margin-top: 2rem;">
-                    <p style="color: var(--text-dim); font-family: var(--font-mono); font-size: 0.85rem;">> waiting for assets/gallery/ uploads...</p>
+            <div class="display-panel">
+                <div class="label" style="margin-bottom: 10px;">Mission_Gallery</div>
+                <div id="outreach-gallery" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px;">
+                    <div class="placeholder" style="height: 200px;">[ PENDING_ASSET_UPLOAD ]</div>
+                    <div class="placeholder" style="height: 200px;">[ PENDING_ASSET_UPLOAD ]</div>
+                    <div class="placeholder" style="height: 200px;">[ PENDING_ASSET_UPLOAD ]</div>
                 </div>
             </div>
         </main>
 
-        <footer style="margin-top: 80px;">
-            <span>&copy; 2026 97711V Pegasus Prime.</span>
-            <span>Independent VEX V5 Team</span>
+        <footer>
+            <div>&copy; 2026 PEGASUS PRIME</div>
+            <div>INDEPENDENT VEX V5 TEAM</div>
+            <div>LOC: AURORA_NEXUS</div>
         </footer>
     </div>
-
     <script src="js/main.js"></script>
 </body>
 </html>
