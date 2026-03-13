@@ -3,61 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Community Impact | 97711V Pegasus Prime</title>
+    <title>Impact | 97711V Pegasus Prime</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
-        <a href="index.html" class="logo">97711V // <span>PRIME</span></a>
+        <a href="index.html" class="logo">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="var(--text-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M2 17L12 22L22 17" stroke="var(--accent-color)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M2 12L12 17L22 12" stroke="var(--border-hover)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            97711V <span>PRIME</span>
+        </a>
         <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="build.html">Robot</a></li>
+            <li><a href="index.html">Overview</a></li>
+            <li><a href="build.html">Hardware</a></li>
             <li><a href="code.html">Logic</a></li>
             <li><a href="outreach.html" class="active">Impact</a></li>
         </ul>
-        <a href="#" class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.8rem;">Contact Us</a>
     </header>
 
     <main>
-        <section class="hero" style="height: 60vh;">
-            <h1>Our <span>Impact.</span></h1>
-            <p>We believe engineering excellence should be shared. Through mentorship and resource sharing, we are building a stronger robotics community.</p>
+        <section class="hero" style="min-height: 60vh;">
+            <div class="hero-badge animate-on-scroll">COMMUNITY INITIATIVE</div>
+            <h1 class="animate-on-scroll" style="transition-delay: 100ms;">Impact <span>Radius.</span></h1>
+            <p class="animate-on-scroll" style="transition-delay: 200ms;">Engineering excellence should be shared. Through mentorship and resource sharing, we are building a stronger robotics community.</p>
         </section>
 
-        <section id="outreach">
-            <h2 class="section-title">Community Initiatives</h2>
+        <section style="padding-top: 0;">
             <div class="grid">
-                <div class="card">
+                <div class="card animate-on-scroll">
+                    <div class="card-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                    </div>
                     <h3>Resource Distribution</h3>
                     <p>Over $500 in VEX hardware donated to rookie teams to ensure hardware limits never stifle potential.</p>
                 </div>
-                <div class="card">
+                <div class="card animate-on-scroll" style="transition-delay: 100ms;">
+                    <div class="card-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                    </div>
                     <h3>Inverted Pendulum</h3>
                     <p>A custom-built control theory project used in community workshops to teach students about PID logic and precise engineering.</p>
                 </div>
-                <div class="card">
+                <div class="card animate-on-scroll" style="transition-delay: 200ms;">
+                    <div class="card-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                    </div>
                     <h3>Mentorship</h3>
                     <p>Working directly with local teams to help them navigate the complexities of V5RC competition.</p>
                 </div>
             </div>
 
-            <div style="margin-top: 5rem; border-top: 1px solid var(--border-color); padding-top: 3rem;">
-                <h2 class="section-title">Mission Gallery</h2>
-                <div id="outreach-gallery" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1rem; margin-top: 2rem;">
-                    <!-- Placeholder images -->
-                    <div style="height: 200px; background-color: var(--surface-color); border: 1px solid var(--border-color); border-radius: 8px;"></div>
-                    <div style="height: 200px; background-color: var(--surface-color); border: 1px solid var(--border-color); border-radius: 8px;"></div>
-                    <div style="height: 200px; background-color: var(--surface-color); border: 1px solid var(--border-color); border-radius: 8px;"></div>
+            <div class="telemetry-container animate-on-scroll" style="margin-top: 5rem;">
+                <div class="telemetry-header">
+                    <div class="telemetry-title">Mission Gallery</div>
+                </div>
+                <div id="outreach-gallery" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 0;">
+                    <!-- Handled by JS -->
                 </div>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 97711V Pegasus Prime. All rights reserved.</p>
-        <p style="font-family: var(--font-mono);">MISSION: IMPACT // RADIUS: REGIONAL</p>
+        <div class="footer-brand">97711V PRIME</div>
+        <div>&copy; 2026 Pegasus Prime. Independent VEX V5 Team.</div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script src="js/main.js?v=3"></script>
 </body>
 </html>

@@ -3,55 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hardware Build | 97711V Pegasus Prime</title>
+    <title>Hardware | 97711V Pegasus Prime</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
-        <a href="index.html" class="logo">97711V // <span>PRIME</span></a>
+        <a href="index.html" class="logo">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="var(--text-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M2 17L12 22L22 17" stroke="var(--accent-color)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M2 12L12 17L22 12" stroke="var(--border-hover)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            97711V <span>PRIME</span>
+        </a>
         <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="build.html" class="active">Robot</a></li>
+            <li><a href="index.html">Overview</a></li>
+            <li><a href="build.html" class="active">Hardware</a></li>
             <li><a href="code.html">Logic</a></li>
             <li><a href="outreach.html">Impact</a></li>
         </ul>
-        <a href="#" class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.8rem;">Contact Us</a>
     </header>
 
     <main>
-        <section class="hero" style="height: 60vh;">
-            <h1>The <span>Blueprint.</span></h1>
-            <p>A deep dive into the mechanical architecture of Zephyr V5. Iterated for the 2025-2026 Push Back season.</p>
+        <section class="hero" style="min-height: 60vh;">
+            <div class="hero-badge animate-on-scroll">HARDWARE SPEC: ZEPHYR V3.2</div>
+            <h1 class="animate-on-scroll" style="transition-delay: 100ms;">The Blueprint.</h1>
+            <p class="animate-on-scroll" style="transition-delay: 200ms;">Structural integrity meets rapid maneuverability. Every component on Zephyr is measured, cut, and placed with deliberate intent.</p>
         </section>
 
-        <section id="specifications">
-            <h2 class="section-title">Hardware Profile</h2>
+        <section style="padding-top: 0;">
             <div class="grid">
-                <div class="card">
+                <div class="card animate-on-scroll">
+                    <div class="card-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><line x1="21.17" y1="8" x2="12" y2="8"/><line x1="3.95" y1="6.06" x2="8.54" y2="14"/><line x1="10.88" y1="21.94" x2="15.46" y2="14"/></svg>
+                    </div>
                     <h3>Drivetrain</h3>
-                    <p>6-Motor 450 RPM geared drive. Direct geared to minimize friction loss, providing high-torque pushing power without sacrificing traversal speed.</p>
+                    <p>6-Motor 450 RPM geared drive. Direct geared to minimize friction loss, providing high-torque pushing power without sacrificing field traversal speed. Custom cut C-channels ensure optimal weight distribution.</p>
                 </div>
-                <div class="card">
-                    <h3>Intake</h3>
-                    <p>High-traction flex-wheel system running at 600RPM for immediate, reliable game element acquisition.</p>
-                </div>
-                <div class="card">
-                    <h3>Structure</h3>
-                    <p>Custom-cut C-channels and aluminum bracing optimized for a perfect strength-to-weight ratio.</p>
+                <div class="card animate-on-scroll" style="transition-delay: 100ms;">
+                    <div class="card-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="7.5 4.21 12 6.81 16.5 4.21"/><polyline points="7.5 19.79 7.5 14.6 3 12"/><polyline points="21 12 16.5 14.6 16.5 19.79"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+                    </div>
+                    <h3>Intake System</h3>
+                    <p>High-traction flex-wheel system running at 600RPM for immediate, reliable game element acquisition during rapid movement.</p>
                 </div>
             </div>
 
-            <div style="margin-top: 4rem; text-align: center;">
-                <div style="height: 400px; background-color: var(--surface-color); border: 1px dashed var(--border-color); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: var(--text-secondary); font-family: var(--font-mono);">
-                    [ INTERACTIVE_CAD_MODEL_VIEWER ]
+            <div class="telemetry-container animate-on-scroll" style="margin-top: 4rem;">
+                <div class="telemetry-header">
+                    <div class="telemetry-title">Interactive Model</div>
+                </div>
+                <div style="height: 400px; display: flex; align-items: center; justify-content: center; font-family: var(--font-mono); color: var(--text-secondary); opacity: 0.5;">
+                    [ CAD RENDERINGS & PROTOTYPE GALLERY ]
                 </div>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 97711V Pegasus Prime. All rights reserved.</p>
-        <p style="font-family: var(--font-mono);">HARDWARE_V3.2 // ITERATION: COMPLETE</p>
+        <div class="footer-brand">97711V PRIME</div>
+        <div>&copy; 2026 Pegasus Prime. Independent VEX V5 Team.</div>
     </footer>
+
+    <script src="js/main.js?v=3"></script>
 </body>
 </html>

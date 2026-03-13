@@ -3,66 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Software Logic | 97711V Pegasus Prime</title>
+    <title>Logic | 97711V Pegasus Prime</title>
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        .code-block {
+            font-family: var(--font-mono);
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            background: rgba(0,0,0,0.4);
+            padding: 30px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            margin-top: 20px;
+        }
+        .code-block .keyword { color: #c678dd; }
+        .code-block .variable { color: #e06c75; }
+        .code-block .property { color: #61afef; }
+    </style>
 </head>
 <body>
     <header>
-        <a href="index.html" class="logo">97711V // <span>PRIME</span></a>
+        <a href="index.html" class="logo">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="var(--text-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M2 17L12 22L22 17" stroke="var(--accent-color)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M2 12L12 17L22 12" stroke="var(--border-hover)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            97711V <span>PRIME</span>
+        </a>
         <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="build.html">Robot</a></li>
+            <li><a href="index.html">Overview</a></li>
+            <li><a href="build.html">Hardware</a></li>
             <li><a href="code.html" class="active">Logic</a></li>
             <li><a href="outreach.html">Impact</a></li>
         </ul>
-        <a href="#" class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.8rem;">Contact Us</a>
     </header>
 
     <main>
-        <section class="hero" style="height: 60vh;">
-            <h1>Software <span>Engineering.</span></h1>
-            <p>Behind the hardware is a sophisticated software stack designed for precision and autonomy.</p>
+        <section class="hero" style="min-height: 60vh;">
+            <div class="hero-badge animate-on-scroll">KERNEL: PROS C++</div>
+            <h1 class="animate-on-scroll" style="transition-delay: 100ms;">Absolute <span>Control.</span></h1>
+            <p class="animate-on-scroll" style="transition-delay: 200ms;">Behind the hardware is a sophisticated software stack designed for precision and autonomy, built on the PROS kernel.</p>
         </section>
 
-        <section id="logic">
-            <h2 class="section-title">Control Systems</h2>
+        <section style="padding-top: 0;">
             <div class="grid">
-                <div class="card">
-                    <h3>PID Control</h3>
-                    <p>Our autonomous routines rely on heavily tuned PID loops to ensure exact positioning regardless of battery voltage or field friction.</p>
+                <div class="card animate-on-scroll">
+                    <div class="card-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                    </div>
+                    <h3>PID Control Loops</h3>
+                    <p>Our autonomous routines rely on heavily tuned Proportional-Integral-Derivative loops to ensure exact positioning regardless of battery voltage or field friction.</p>
                 </div>
-                <div class="card">
-                    <h3>PROS C++</h3>
-                    <p>Utilizing the PROS kernel for a low-level, high-performance programming environment that gives us direct control over the Cortex.</p>
-                </div>
-                <div class="card">
+                <div class="card animate-on-scroll" style="transition-delay: 100ms;">
+                    <div class="card-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+                    </div>
                     <h3>Open Source</h3>
-                    <p>We believe in sharing knowledge. Our control logic is regularly documented and available for the community to study.</p>
+                    <p>We believe in sharing knowledge. Our control logic and core utilities are regularly documented and available for the community to study.</p>
                 </div>
             </div>
 
-            <div class="terminal-container" style="margin-top: 4rem;">
-                <div class="terminal-header">
-                    <div class="dot dot-red"></div>
-                    <div class="dot dot-yellow"></div>
-                    <div class="dot dot-green"></div>
-                    <span style="margin-left: auto; font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-secondary);">PID_LOGIC_PREVIEW</span>
+            <div class="telemetry-container animate-on-scroll" style="margin-top: 4rem;">
+                <div class="telemetry-header">
+                    <div class="telemetry-title">PID Logic Preview</div>
                 </div>
-                <div class="terminal-body" style="color: var(--accent-secondary);">
-                    <div class="terminal-line">error = target - current_position;</div>
-                    <div class="terminal-line">integral += error;</div>
-                    <div class="terminal-line">derivative = error - previous_error;</div>
-                    <div class="terminal-line"><br></div>
-                    <div class="terminal-line">motor_power = (kP * error) + (kI * integral) + (kD * derivative);</div>
-                    <div class="terminal-line">previous_error = error;</div>
+                <div style="padding: 2rem;">
+                    <div class="code-block">
+                        <span class="variable">error</span> = <span class="property">target</span> - <span class="property">current_position</span>;<br>
+                        <span class="variable">integral</span> += <span class="variable">error</span>;<br>
+                        <span class="variable">derivative</span> = <span class="variable">error</span> - <span class="property">previous_error</span>;<br>
+                        <br>
+                        <span class="keyword">motor_power</span> = (kP * <span class="variable">error</span>) + (kI * <span class="variable">integral</span>) + (kD * <span class="variable">derivative</span>);<br>
+                        <span class="property">previous_error</span> = <span class="variable">error</span>;
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 97711V Pegasus Prime. All rights reserved.</p>
-        <p style="font-family: var(--font-mono);">KERNEL: PROS // LOGIC: OPTIMIZED</p>
+        <div class="footer-brand">97711V PRIME</div>
+        <div>&copy; 2026 Pegasus Prime. Independent VEX V5 Team.</div>
     </footer>
+
+    <script src="js/main.js?v=3"></script>
 </body>
 </html>
