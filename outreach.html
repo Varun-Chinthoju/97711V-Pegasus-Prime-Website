@@ -3,76 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>97711V | Community Impact</title>
+    <title>Impact | 97711V Pegasus Prime</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="bg-blobs">
-        <div class="blob blob-1"></div>
-        <div class="blob blob-2"></div>
-        <div class="blob blob-3"></div>
-    </div>
-    <div class="app-container">
-        <!-- Sidebar Navigation -->
-        <aside class="sidebar">
-            <div class="brand">
-                97711V<span>//</span>PRIME
-            </div>
-            <nav class="nav-menu">
-                <a href="index.html" class="nav-link">Dashboard <span>_00</span></a>
-                <a href="build.html" class="nav-link">Hardware Build <span>_01</span></a>
-                <a href="code.html" class="nav-link">Logic & PID <span>_02</span></a>
-                <a href="outreach.html" class="nav-link active">Community <span>_03</span></a>
+    <div class="container">
+        <header class="header">
+            <a href="index.html" class="brand">97711V<span>//</span>PRIME</a>
+            <nav class="nav-links">
+                <a href="index.html">Overview</a>
+                <a href="build.html">Build</a>
+                <a href="code.html">Code</a>
+                <a href="outreach.html" class="active">Impact</a>
             </nav>
-            <div style="margin-top: auto; color: var(--text-muted); font-size: 0.8rem; font-family: var(--font-mono);">
-                SYS.V5RC // ACTIVE
+        </header>
+
+        <main>
+            <div class="tag">COMMUNITY // OUTREACH</div>
+            <h1>Impact Radius.</h1>
+            <p>Building hardware is only half the mission. We ensure that our resources, knowledge, and passion actively raise the standard for the entire region.</p>
+
+            <div class="grid">
+                <div class="grid-item">
+                    <h3>Resource Distribution</h3>
+                    <div class="stat-value blue">&gt;$500</div>
+                    <p style="font-size: 0.95rem;">We've distributed C-channels, motors, and sensors to rookie teams across our region to ensure hardware isn't a barrier to entry.</p>
+                </div>
+                <div class="grid-item">
+                    <h3>Educational Initiative</h3>
+                    <p style="font-size: 0.95rem; margin-top: 0.5rem;"><strong style="color: var(--text-main);">Inverted Pendulum:</strong> To demonstrate the power of control theory, we built a custom inverted pendulum. This engaging project is used in community workshops to teach students about PID logic.</p>
+                </div>
             </div>
-        </aside>
 
-        <!-- Main Dashboard Area -->
-        <main class="main-content">
-            <header class="header">
-                <h1 class="header-title">Impact Radius</h1>
-            </header>
-
-            <div class="bento-grid">
-                <!-- Hardware Donations -->
-                <div class="panel panel-half">
-                    <div class="panel-header">Resource Distribution</div>
-                    <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--accent-green);">>$500 Donated</h3>
-                    <p style="color: var(--text-muted);">
-                        We ensure hardware isn't a barrier to entry. We've distributed C-channels, motors, and sensors to rookie teams across our region to help them compete.
-                    </p>
-                </div>
-
-                <!-- Inverted Pendulum Project -->
-                <div class="panel panel-half">
-                    <div class="panel-header">Educational Initiative</div>
-                    <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--accent-cyan);">Inverted Pendulum</h3>
-                    <p style="color: var(--text-muted);">
-                        To demonstrate the power of control theory, we built a custom inverted pendulum. This engaging project is used in community workshops to teach students about PID logic.
-                    </p>
-                </div>
-
-                <!-- Sponsor/Partnership Wall -->
-                <div class="panel panel-wide">
-                    <div class="panel-header">Strategic Partnerships</div>
-                    <div style="display: flex; gap: 2rem; justify-content: center; padding: 2rem 0; opacity: 0.5;">
-                        <h2 style="font-family: var(--font-mono);">[ SPONSOR LOGO ]</h2>
-                        <h2 style="font-family: var(--font-mono);">[ SPONSOR LOGO ]</h2>
-                        <h2 style="font-family: var(--font-mono);">[ SPONSOR LOGO ]</h2>
-                    </div>
-                </div>
-
-                 <!-- Gallery System (Dynamic) -->
-                 <div class="panel panel-wide">
-                    <div class="panel-header">Mission Gallery</div>
-                    <div id="outreach-gallery" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1rem; margin-top: 1rem;">
-                        <p style="color: var(--text-muted); grid-column: 1/-1; font-family: var(--font-mono);">> loading assets/gallery/...</p>
-                    </div>
+            <div style="margin-top: 5rem; border-top: 1px solid var(--border-color); padding-top: 3rem;">
+                <h2 style="margin-top: 0;">Mission Gallery</h2>
+                <div id="outreach-gallery" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1rem; margin-top: 2rem;">
+                    <p style="color: var(--text-muted); font-family: var(--font-mono); font-size: 0.85rem;">> waiting for assets/gallery/ uploads...</p>
                 </div>
             </div>
         </main>
+
+        <footer class="footer">
+            <span>&copy; 2026 97711V Pegasus Prime.</span>
+            <span>Independent VEX V5 Team</span>
+        </footer>
     </div>
     <script src="js/main.js"></script>
 </body>
