@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outreach | Pegasus Prime Impact</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;800&display=swap" rel="stylesheet">
+    <style>
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: var(--border-radius);
+            margin-top: 1rem;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        .gallery-item {
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            border: 1px solid var(--border-main);
+            background: var(--bg-card);
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+        .gallery-label {
+            padding: 0.5rem;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-brand">97711V // Pegasus Prime</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="robot.html">Robot</a>
+            <a href="competition.html">Competition</a>
+            <a href="outreach.html" class="active">Outreach</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1 style="color: var(--prime-gold); margin-bottom: 2rem;">OUTREACH // MISSION</h1>
+        
+        <div class="bento-grid">
+            <!-- Part Donations -->
+            <div class="card" style="grid-column: span 2;">
+                <h3 class="card-title">Supporting the Community</h3>
+                <p>We believe that no team should be held back by lack of hardware. To date, we have donated over $500 worth of VEX parts, including C-Channels, motors, and sensors, to three local rookie teams to help them get on the field.</p>
+                <div style="margin-top: 1.5rem; color: var(--zephyr-blue); font-weight: 800;">STATUS: ACTIVE PROGRAM</div>
+            </div>
+
+            <!-- PID Project -->
+            <div class="card" style="grid-column: span 2; grid-row: span 2;">
+                <h3 class="card-title">The Power of PID: Inverted Pendulum</h3>
+                <p>To demonstrate the precision required for high-level autonomous routines, we hosted a community event featuring our <strong>Inverted Pendulum Project</strong>. This project uses a custom PID loop to balance a vertical pole on a moving cart—a classic control theory challenge.</p>
+                
+                <div class="video-container">
+                    <!-- Placeholder YouTube Embed - Replace with your actual IDs later -->
+                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="PID Inverted Pendulum Demo" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <p style="font-size: 0.8rem; margin-top: 0.5rem; color: var(--text-muted);">Watch the full demonstration on our YouTube channel.</p>
+            </div>
+
+            <!-- Mission Statement -->
+            <div class="card" style="grid-column: span 2;">
+                <h3 class="card-title">Our Outreach Philosophy</h3>
+                <p>Innovation isn't just about building the best robot; it's about raising the standard for the entire region. By sharing our code and donating our resources, we ensure a more competitive and inclusive robotics community.</p>
+            </div>
+        </div>
+
+        <!-- Dynamic Gallery Section -->
+        <div style="margin-top: 4rem;">
+            <h2 style="color: var(--prime-gold); border-bottom: 1px solid var(--border-main); padding-bottom: 0.5rem;">TEAM GALLERY</h2>
+            <div id="outreach-gallery" class="gallery-grid">
+                <!-- Dynamic Content Loaded via main.js -->
+                <p style="color: var(--text-muted);">Photos will appear here based on your subfolders in assets/gallery/...</p>
+            </div>
+        </div>
+
+        <footer class="footer">
+            &copy; 2026 97711V Pegasus Prime. Built with precision by the team.
+        </footer>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
