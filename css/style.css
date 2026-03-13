@@ -1,128 +1,140 @@
 :root {
-  /* Obsidian Base */
-  --bg-deep: #010409;
-  --bg-surface: #0d1117;
-  --bg-card: #161b22;
-  
-  /* Celestial Prime (Gold) */
-  --prime-gold: #ffd700;
-  --prime-gold-glow: rgba(255, 215, 0, 0.2);
-  
-  /* Celestial Zephyr (Blue/Cyan) */
-  --zephyr-blue: #38bdf8;
-  --zephyr-blue-glow: rgba(56, 189, 248, 0.25);
-  
-  /* Text */
-  --text-main: #f0f6fc;
-  --text-muted: #8b949e;
-  
-  /* Layout */
-  --border-radius: 12px;
-  --border-main: #30363d;
+  --bg: #000000;
+  --glass: rgba(255, 255, 255, 0.03);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --prime-gold: #FFD700;
+  --zephyr-blue: #007AFF; /* Apple-style SF Blue */
+  --text-primary: #FFFFFF;
+  --text-secondary: #86868b; /* Apple's specific sub-text color */
+  --font-main: 'Inter', -apple-system, system-ui, sans-serif;
 }
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  -webkit-font-smoothing: antialiased;
 }
 
 body {
-  background-color: var(--bg-deep);
-  color: var(--text-main);
-  font-family: 'Inter', -apple-system, sans-serif;
-  line-height: 1.6;
+  background-color: var(--bg);
+  color: var(--text-primary);
+  font-family: var(--font-main);
+  overflow-x: hidden;
 }
 
-/* Nav Bar */
+/* Apple-style Navigation */
 nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.5rem 5%;
-  background: rgba(13, 17, 23, 0.8);
-  backdrop-filter: blur(10px);
-  position: sticky;
+  position: fixed;
   top: 0;
-  z-index: 100;
-  border-bottom: 1px solid var(--border-main);
-}
-
-.nav-brand {
-  font-size: 1.5rem;
-  font-weight: 800;
-  color: var(--prime-gold);
-  text-transform: uppercase;
-  letter-spacing: 2px;
+  width: 100%;
+  height: 44px;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: saturate(180%) blur(20px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  border-bottom: 0.5px solid var(--glass-border);
 }
 
 .nav-links a {
-  color: var(--text-main);
+  color: #f5f5f7;
   text-decoration: none;
-  margin-left: 2rem;
-  font-weight: 500;
-  transition: color 0.3s;
+  font-size: 12px;
+  font-weight: 400;
+  margin: 0 20px;
+  opacity: 0.8;
+  transition: opacity 0.3s;
 }
 
-.nav-links a:hover, .nav-links a.active {
-  color: var(--zephyr-blue);
+.nav-links a:hover {
+  opacity: 1;
 }
 
-/* Bento Grid */
-.container {
-  max-width: 1200px;
-  margin: 2rem auto;
-  padding: 0 5%;
-}
-
-.bento-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: auto;
-  gap: 1.5rem;
-}
-
-.card {
-  background: var(--bg-card);
-  border: 1px solid var(--border-main);
-  border-radius: var(--border-radius);
-  padding: 2rem;
-  transition: transform 0.3s, border-color 0.3s;
-  overflow: hidden;
-  position: relative;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  border-color: var(--zephyr-blue);
-  box-shadow: 0 10px 30px var(--zephyr-blue-glow);
-}
-
-.card-title {
-  color: var(--prime-gold);
-  font-size: 1.25rem;
-  margin-bottom: 1rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-/* Specific Card Sizes */
-.hero-card {
-  grid-column: span 3;
-  grid-row: span 2;
+/* Section Containers */
+section {
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: linear-gradient(135deg, var(--bg-card) 0%, #000 100%);
-}
-
-.side-card {
-  grid-column: span 1;
-}
-
-.footer {
+  align-items: center;
+  padding: 80px 20px;
   text-align: center;
-  padding: 4rem 0;
-  color: var(--text-muted);
-  font-size: 0.9rem;
+}
+
+/* Hero Typography */
+.hero-title {
+  font-size: clamp(3rem, 10vw, 8rem);
+  font-weight: 700;
+  letter-spacing: -0.05em;
+  line-height: 1.05;
+  margin-bottom: 20px;
+  background: linear-gradient(180deg, #fff 0%, #86868b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-subtitle {
+  font-size: clamp(1.2rem, 3vw, 2.5rem);
+  font-weight: 500;
+  color: var(--text-secondary);
+  max-width: 800px;
+  margin-bottom: 40px;
+}
+
+/* The Liquid Glass Card */
+.glass-card {
+  background: var(--glass);
+  backdrop-filter: blur(30px);
+  border: 1px solid var(--glass-border);
+  border-radius: 30px;
+  padding: 60px;
+  max-width: 1000px;
+  width: 90%;
+  margin: 20px auto;
+  transition: transform 0.5s cubic-bezier(0.2, 0, 0.2, 1);
+}
+
+.glass-card:hover {
+  transform: scale(1.02);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Call to Action */
+.cta-link {
+  color: var(--zephyr-blue);
+  text-decoration: none;
+  font-size: 21px;
+  font-weight: 400;
+  display: inline-flex;
+  align-items: center;
+}
+
+.cta-link::after {
+  content: ' >';
+  font-size: 15px;
+  margin-left: 5px;
+}
+
+.cta-link:hover {
+  text-decoration: underline;
+}
+
+/* Background Gradients (The "Liquid") */
+.blob {
+  position: fixed;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, var(--zephyr-blue) 0%, transparent 70%);
+  filter: blur(80px);
+  opacity: 0.15;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.gold-blob {
+  background: radial-gradient(circle, var(--prime-gold) 0%, transparent 70%);
+  top: -200px;
+  right: -200px;
 }
