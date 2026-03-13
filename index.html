@@ -3,59 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>97711V | Pegasus Prime</title>
+    <title>97711V Pegasus Prime | Engineering the Future</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="wrapper">
-        <header>
-            <div class="brand">97711V // <span>PRIME</span></div>
-            <nav>
-                <a href="index.html" class="active">00_OVERVIEW</a>
-                <a href="build.html">01_BUILD</a>
-                <a href="code.html">02_CODE</a>
-                <a href="outreach.html">03_IMPACT</a>
-            </nav>
-            <div style="padding: 20px; font-family: var(--font-mono); font-size: 11px;">V5RC_V.2026</div>
-        </header>
+    <header>
+        <a href="index.html" class="logo">97711V // <span>PRIME</span></a>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="build.html">Robot</a></li>
+            <li><a href="code.html">Logic</a></li>
+            <li><a href="outreach.html">Impact</a></li>
+        </ul>
+        <a href="#" class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.8rem;">Contact Us</a>
+    </header>
 
-        <main>
-            <section class="hero">
-                <span class="sys-info">SYSTEM_STATUS: ACTIVE</span>
-                <h1>Zephyr.</h1>
-            </section>
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1>Engineering the <span>Future.</span></h1>
+            <p>Team 97711V is an independent VEX V5 robotics team dedicated to technical excellence and community impact.</p>
+            <div class="cta-group">
+                <a href="build.html" class="btn btn-primary">Our Robot</a>
+                <a href="outreach.html" class="btn btn-secondary">Learn Our Impact</a>
+            </div>
+        </section>
 
-            <div class="info-grid">
-                <div class="info-block">
-                    <div class="label">Primary_Objective</div>
-                    <div class="desc">Engineering the next generation of V5 robotics with precision and liquid-smooth logic. Our 2025-2026 'Push Back' competitive entry.</div>
+        <!-- Mission Section -->
+        <section id="mission">
+            <h2 class="section-title">Who We Are</h2>
+            <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+                <p style="font-size: 1.1rem; line-height: 1.8;">Based in Aurora Nexus, Pegasus Prime is more than just a robotics team. We are a collection of students pushing the boundaries of what's possible in the VEX V5 Robotics Competition. Our mission is to innovate with precision, compete with integrity, and inspire the next generation of engineers.</p>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section id="stats" style="background-color: var(--surface-color);">
+            <h2 class="section-title">Live Statistics</h2>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h4>Win Rate</h4>
+                    <div>85.7%</div>
                 </div>
-                <div class="info-block">
-                    <div class="label">Win_Rate</div>
-                    <div class="value">85.7%</div>
-                    <div class="desc">12 Wins — 2 Losses. Regional Qualifier Performance.</div>
+                <div class="stat-item">
+                    <h4>Regional Rank</h4>
+                    <div>#1</div>
                 </div>
-                <div class="info-block">
-                    <div class="label">Skills_Score</div>
-                    <div class="value" style="color: var(--accent);">245</div>
-                    <div class="desc">Current Regional #1 standing. Optimized for high-traction maneuverability.</div>
+                <div class="stat-item">
+                    <h4>Skills Score</h4>
+                    <div>245</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Highlights -->
+        <section id="highlights">
+            <h2 class="section-title">Technical Excellence</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Zephyr V5</h3>
+                    <p>Our 2025-2026 entry, designed for high-traction maneuverability and consistent autonomous scoring.</p>
+                </div>
+                <div class="card">
+                    <h3>PID Control</h3>
+                    <p>Heavily tuned control loops ensure precision in every movement, eliminating hardware variance.</p>
+                </div>
+                <div class="card">
+                    <h3>Impact</h3>
+                    <p>From part donations to educational workshops, we are raising the standard for our community.</p>
                 </div>
             </div>
 
-            <div class="display-panel">
-                <div class="label" style="margin-bottom: 10px;">Engineering_Preview</div>
-                <div class="placeholder">
-                    [ INTERACTIVE_CAD_MODEL_PLACEHOLDER ]
+            <!-- Terminal Console -->
+            <div class="terminal-container">
+                <div class="terminal-header">
+                    <div class="dot dot-red"></div>
+                    <div class="dot dot-yellow"></div>
+                    <div class="dot dot-green"></div>
+                    <span style="margin-left: auto; font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-secondary);">PEGASUS_PRIME_SYS_v2.0</span>
+                </div>
+                <div class="terminal-body">
+                    <div class="terminal-line"><span>[SYS]</span> Booting Prime System...</div>
+                    <div class="terminal-line"><span>[SYS]</span> Connecting to V5 Cortex via PROS... <span>OK</span></div>
+                    <div class="terminal-line"><span>[SYS]</span> Fetching match telemetry... <span>12-2-0</span></div>
+                    <div class="terminal-line"><span>[SYS]</span> PID Settle Time: <span>142ms</span></div>
+                    <div class="terminal-line"><span>[SYS]</span> Status: <span>ENGINE_ONLINE</span></div>
+                    <div class="terminal-line">_</div>
                 </div>
             </div>
-        </main>
+        </section>
+    </main>
 
-        <footer>
-            <div>&copy; 2026 PEGASUS PRIME</div>
-            <div>INDEPENDENT VEX V5 TEAM</div>
-            <div>LOC: AURORA_NEXUS</div>
-        </footer>
-    </div>
+    <footer>
+        <p>&copy; 2026 97711V Pegasus Prime. All rights reserved.</p>
+        <p style="font-family: var(--font-mono);">LOC: AURORA_NEXUS // SYS: ACTIVE</p>
+    </footer>
+
     <script src="js/main.js"></script>
 </body>
 </html>

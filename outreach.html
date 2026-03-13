@@ -3,57 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Impact | 97711V Pegasus Prime</title>
+    <title>Community Impact | 97711V Pegasus Prime</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="wrapper">
-        <header>
-            <div class="brand">97711V // <span>PRIME</span></div>
-            <nav>
-                <a href="index.html">00_OVERVIEW</a>
-                <a href="build.html">01_BUILD</a>
-                <a href="code.html">02_CODE</a>
-                <a href="outreach.html" class="active">03_IMPACT</a>
-            </nav>
-            <div style="padding: 20px; font-family: var(--font-mono); font-size: 11px;">V5RC_V.2026</div>
-        </header>
+    <header>
+        <a href="index.html" class="logo">97711V // <span>PRIME</span></a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="build.html">Robot</a></li>
+            <li><a href="code.html">Logic</a></li>
+            <li><a href="outreach.html" class="active">Impact</a></li>
+        </ul>
+        <a href="#" class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.8rem;">Contact Us</a>
+    </header>
 
-        <main>
-            <section class="hero">
-                <span class="sys-info">MISSION_OBJ: COMMUNITY_UP LIFT</span>
-                <h1>The Impact.</h1>
-            </section>
+    <main>
+        <section class="hero" style="height: 60vh;">
+            <h1>Our <span>Impact.</span></h1>
+            <p>We believe engineering excellence should be shared. Through mentorship and resource sharing, we are building a stronger robotics community.</p>
+        </section>
 
-            <div class="info-grid">
-                <div class="info-block">
-                    <div class="label">Resource_Sharing</div>
-                    <div class="value" style="color: var(--accent);">&gt;$500</div>
-                    <div class="desc">VEX hardware donated to rookie teams. Ensuring that hardware access is never a barrier to entry in competitive robotics.</div>
+        <section id="outreach">
+            <h2 class="section-title">Community Initiatives</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Resource Distribution</h3>
+                    <p>Over $500 in VEX hardware donated to rookie teams to ensure hardware limits never stifle potential.</p>
                 </div>
-                <div class="info-block" style="grid-column: span 2;">
-                    <div class="label">Educational_Project</div>
-                    <div class="value">Inverted_Pendulum</div>
-                    <div class="desc">A custom-built control theory demo used in regional workshops to teach the practical applications of PID logic to students.</div>
+                <div class="card">
+                    <h3>Inverted Pendulum</h3>
+                    <p>A custom-built control theory project used in community workshops to teach students about PID logic and precise engineering.</p>
                 </div>
-            </div>
-
-            <div class="display-panel">
-                <div class="label" style="margin-bottom: 10px;">Mission_Gallery</div>
-                <div id="outreach-gallery" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px;">
-                    <div class="placeholder" style="height: 200px;">[ PENDING_ASSET_UPLOAD ]</div>
-                    <div class="placeholder" style="height: 200px;">[ PENDING_ASSET_UPLOAD ]</div>
-                    <div class="placeholder" style="height: 200px;">[ PENDING_ASSET_UPLOAD ]</div>
+                <div class="card">
+                    <h3>Mentorship</h3>
+                    <p>Working directly with local teams to help them navigate the complexities of V5RC competition.</p>
                 </div>
             </div>
-        </main>
 
-        <footer>
-            <div>&copy; 2026 PEGASUS PRIME</div>
-            <div>INDEPENDENT VEX V5 TEAM</div>
-            <div>LOC: AURORA_NEXUS</div>
-        </footer>
-    </div>
+            <div style="margin-top: 5rem; border-top: 1px solid var(--border-color); padding-top: 3rem;">
+                <h2 class="section-title">Mission Gallery</h2>
+                <div id="outreach-gallery" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1rem; margin-top: 2rem;">
+                    <!-- Placeholder images -->
+                    <div style="height: 200px; background-color: var(--surface-color); border: 1px solid var(--border-color); border-radius: 8px;"></div>
+                    <div style="height: 200px; background-color: var(--surface-color); border: 1px solid var(--border-color); border-radius: 8px;"></div>
+                    <div style="height: 200px; background-color: var(--surface-color); border: 1px solid var(--border-color); border-radius: 8px;"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 97711V Pegasus Prime. All rights reserved.</p>
+        <p style="font-family: var(--font-mono);">MISSION: IMPACT // RADIUS: REGIONAL</p>
+    </footer>
+
     <script src="js/main.js"></script>
 </body>
 </html>

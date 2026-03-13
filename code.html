@@ -3,74 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Code | 97711V Pegasus Prime</title>
+    <title>Software Logic | 97711V Pegasus Prime</title>
     <link rel="stylesheet" href="css/style.css">
-    <style>
-        .code-container {
-            padding: 20px;
-            background: #050505;
-            border: 1px solid var(--border);
-            font-family: var(--font-mono);
-            font-size: 14px;
-            color: var(--accent);
-            line-height: 1.6;
-            margin-top: 20px;
-        }
-    </style>
 </head>
 <body>
-    <div class="wrapper">
-        <header>
-            <div class="brand">97711V // <span>PRIME</span></div>
-            <nav>
-                <a href="index.html">00_OVERVIEW</a>
-                <a href="build.html">01_BUILD</a>
-                <a href="code.html" class="active">02_CODE</a>
-                <a href="outreach.html">03_IMPACT</a>
-            </nav>
-            <div style="padding: 20px; font-family: var(--font-mono); font-size: 11px;">V5RC_V.2026</div>
-        </header>
+    <header>
+        <a href="index.html" class="logo">97711V // <span>PRIME</span></a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="build.html">Robot</a></li>
+            <li><a href="code.html" class="active">Logic</a></li>
+            <li><a href="outreach.html">Impact</a></li>
+        </ul>
+        <a href="#" class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.8rem;">Contact Us</a>
+    </header>
 
-        <main>
-            <section class="hero">
-                <span class="sys-info">KERNEL_SPEC: PROS_C++</span>
-                <h1>The Logic.</h1>
-            </section>
+    <main>
+        <section class="hero" style="height: 60vh;">
+            <h1>Software <span>Engineering.</span></h1>
+            <p>Behind the hardware is a sophisticated software stack designed for precision and autonomy.</p>
+        </section>
 
-            <div class="info-grid">
-                <div class="info-block" style="grid-column: span 3;">
-                    <div class="label">Control_Theory // PID_Loop</div>
-                    <div class="desc">Our autonomous routines rely on heavily tuned PID loops to ensure exact positioning regardless of battery voltage or field friction. It's about eliminating variance in competitive environments.</div>
-                    <div class="code-container">
-                        error = target - current_position;<br>
-                        integral += error;<br>
-                        derivative = error - previous_error;<br>
-                        <br>
-                        motor_power = (kP * error) + (kI * integral) + (kD * derivative);<br>
-                        previous_error = error;
-                    </div>
+        <section id="logic">
+            <h2 class="section-title">Control Systems</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>PID Control</h3>
+                    <p>Our autonomous routines rely on heavily tuned PID loops to ensure exact positioning regardless of battery voltage or field friction.</p>
+                </div>
+                <div class="card">
+                    <h3>PROS C++</h3>
+                    <p>Utilizing the PROS kernel for a low-level, high-performance programming environment that gives us direct control over the Cortex.</p>
+                </div>
+                <div class="card">
+                    <h3>Open Source</h3>
+                    <p>We believe in sharing knowledge. Our control logic is regularly documented and available for the community to study.</p>
                 </div>
             </div>
 
-            <div class="info-grid">
-                <div class="info-block">
-                    <div class="label">Version_Control</div>
-                    <div class="value" style="font-size: 20px;">Git_Automated</div>
-                    <div class="desc">Continuous deployment to V5 Cortex.</div>
+            <div class="terminal-container" style="margin-top: 4rem;">
+                <div class="terminal-header">
+                    <div class="dot dot-red"></div>
+                    <div class="dot dot-yellow"></div>
+                    <div class="dot dot-green"></div>
+                    <span style="margin-left: auto; font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-secondary);">PID_LOGIC_PREVIEW</span>
                 </div>
-                <div class="info-block" style="grid-column: span 2;">
-                    <div class="label">Open_Source</div>
-                    <div class="value" style="font-size: 20px;">Public_Repository</div>
-                    <div class="desc">We believe in sharing knowledge. Parts of our control logic are available for study. [ VIEW_ON_GITHUB ]</div>
+                <div class="terminal-body" style="color: var(--accent-secondary);">
+                    <div class="terminal-line">error = target - current_position;</div>
+                    <div class="terminal-line">integral += error;</div>
+                    <div class="terminal-line">derivative = error - previous_error;</div>
+                    <div class="terminal-line"><br></div>
+                    <div class="terminal-line">motor_power = (kP * error) + (kI * integral) + (kD * derivative);</div>
+                    <div class="terminal-line">previous_error = error;</div>
                 </div>
             </div>
-        </main>
+        </section>
+    </main>
 
-        <footer>
-            <div>&copy; 2026 PEGASUS PRIME</div>
-            <div>INDEPENDENT VEX V5 TEAM</div>
-            <div>LOC: AURORA_NEXUS</div>
-        </footer>
-    </div>
+    <footer>
+        <p>&copy; 2026 97711V Pegasus Prime. All rights reserved.</p>
+        <p style="font-family: var(--font-mono);">KERNEL: PROS // LOGIC: OPTIMIZED</p>
+    </footer>
 </body>
 </html>
