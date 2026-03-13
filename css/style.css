@@ -1,37 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@400;700&display=swap');
 
 :root {
-  --bg-dark: #020617; /* Deep midnight */
-  --panel-bg: rgba(15, 23, 42, 0.4); /* Translucent */
-  --panel-border: rgba(255, 255, 255, 0.08);
-  --text-main: #f8fafc;
-  --text-muted: #94a3b8;
-  --accent-cyan: #22d3ee;
-  --accent-gold: #facc15;
-  --accent-green: #4ade80;
+  --bg-dark: #000B18; /* Deep celestial navy */
+  --panel-bg: rgba(255, 255, 255, 0.03); /* Frosty white glass */
+  --panel-border: rgba(255, 255, 255, 0.1);
+  --text-main: #FFFFFF;
+  --text-muted: #94A3B8;
+  --accent-blue: #0EA5E9; /* Sky Blue */
+  --accent-gold: #FACC15; /* Prime Gold */
+  --accent-white: #F8FAFC; /* Pegasus White */
+  --accent-green: #22C55E;
   --font-sans: 'Inter', sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
-  --glass-blur: blur(12px);
+  --glass-blur: blur(16px);
 }
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+/* ... existing reset styles ... */
 
-body {
-  background-color: var(--bg-dark);
-  color: var(--text-main);
-  font-family: var(--font-sans);
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
-  min-height: 100vh;
-  position: relative;
-  overflow: hidden;
-}
-
-/* Background Blobs for Glass Effect */
+/* Background Blobs for Pegasus Effect */
 .bg-blobs {
   position: fixed;
   top: 0;
@@ -45,16 +31,16 @@ body {
 
 .blob {
   position: absolute;
-  width: 600px;
-  height: 600px;
+  width: 700px;
+  height: 700px;
   border-radius: 50%;
-  filter: blur(120px);
-  opacity: 0.2;
+  filter: blur(140px);
+  opacity: 0.15;
 }
 
-.blob-1 { top: -100px; left: -100px; background: var(--accent-cyan); }
-.blob-2 { bottom: -100px; right: -100px; background: var(--accent-gold); }
-.blob-3 { top: 40%; left: 50%; background: #4f46e5; width: 400px; height: 400px; }
+.blob-1 { top: -150px; left: -150px; background: var(--accent-white); }
+.blob-2 { bottom: -150px; right: -150px; background: var(--accent-gold); }
+.blob-3 { top: 30%; left: 40%; background: var(--accent-blue); width: 500px; height: 500px; }
 
 /* Dashboard Layout */
 .app-container {
@@ -89,7 +75,7 @@ body {
 }
 
 .brand span {
-  color: var(--accent-cyan);
+  color: var(--accent-blue);
 }
 
 .nav-menu {
@@ -113,7 +99,7 @@ body {
 .nav-link:hover, .nav-link.active {
   background-color: var(--panel-bg);
   color: var(--text-main);
-  border-left: 2px solid var(--accent-cyan);
+  border-left: 2px solid var(--accent-blue);
 }
 
 /* Main Dashboard Area */
@@ -203,7 +189,7 @@ body {
   margin-bottom: 0.5rem;
 }
 
-.data-value.cyan { color: var(--accent-cyan); }
+.data-value.cyan { color: var(--accent-blue); }
 .data-value.gold { color: var(--accent-gold); }
 
 .data-label {
@@ -218,7 +204,7 @@ body {
   padding: 1rem;
   font-family: var(--font-mono);
   font-size: 0.85rem;
-  color: var(--accent-cyan);
+  color: var(--accent-blue);
   overflow-x: auto;
   border: 1px solid var(--panel-border);
 }
