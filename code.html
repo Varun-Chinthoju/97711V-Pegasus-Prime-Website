@@ -5,54 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Code | 97711V Pegasus Prime</title>
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        .code-block {
+            font-family: var(--font-mono);
+            font-size: 16px;
+            color: var(--zephyr-blue);
+            line-height: 1.8;
+            background: rgba(0,0,0,0.3);
+            padding: 40px;
+            border-radius: 20px;
+            border: 1px solid var(--glass-border);
+            margin-top: 40px;
+        }
+    </style>
 </head>
 <body>
+    <div class="aura aura-blue"></div>
+    <div class="aura aura-gold"></div>
+
     <div class="container">
-        <header class="header">
-            <a href="index.html" class="brand">97711V<span>//</span>PRIME</a>
-            <nav class="nav-links">
+        <nav>
+            <a href="index.html" class="brand">97711V<span> // </span>PRIME</a>
+            <div class="nav-links">
                 <a href="index.html">Overview</a>
                 <a href="build.html">Build</a>
                 <a href="code.html" class="active">Code</a>
                 <a href="outreach.html">Impact</a>
-            </nav>
-        </header>
+            </div>
+        </nav>
 
         <main>
-            <div class="tag">LOGIC // PROS C++</div>
-            <h1>Software Engineering.</h1>
-            <p>Our autonomous routines rely on heavily tuned PID loops to ensure exact positioning regardless of battery voltage or field friction. It's about eliminating variance.</p>
+            <section class="hero">
+                <span class="sys-tag">LOGIC // PROS C++</span>
+                <h1>Software.</h1>
+                <p class="hero-p">Our autonomous routines rely on heavily tuned PID loops to ensure exact positioning regardless of battery voltage or field friction. It's about eliminating variance.</p>
+            </section>
 
-            <h2 style="margin-top: 3rem;">Math Notes: Custom PID</h2>
-            <div class="code-block">
-                error = target - current_position;<br>
-                integral += error;<br>
-                derivative = error - previous_error;<br>
-                <br>
-                motor_power = (kP * error) + (kI * integral) + (kD * derivative);<br>
-                previous_error = error;
-            </div>
-
-            <div class="grid" style="margin-top: 4rem;">
-                <div class="grid-item">
-                    <h3>Open Source</h3>
-                    <p style="font-size: 0.95rem;">We believe in sharing knowledge. Parts of our control logic are available for other teams to study.</p>
-                    <a href="#" style="color: var(--accent-blue); text-decoration: none; font-size: 0.9rem; font-weight: 500;">View Repository &rarr;</a>
-                </div>
-                <div class="grid-item">
-                    <h3>Tuning Data</h3>
-                    <div class="placeholder-box" style="margin-top: 0; height: 120px;">
-                        [ PID SETTLE CHART ]
-                    </div>
+            <div class="glass-panel">
+                <div class="panel-label">Math Notes // Custom PID Control</div>
+                <div class="code-block">
+                    error = target - current_position;<br>
+                    integral += error;<br>
+                    derivative = error - previous_error;<br>
+                    <br>
+                    motor_power = (kP * error) + (kI * integral) + (kD * derivative);<br>
+                    previous_error = error;
                 </div>
             </div>
         </main>
 
-        <footer class="footer">
+        <footer style="margin-top: 80px;">
             <span>&copy; 2026 97711V Pegasus Prime.</span>
             <span>Independent VEX V5 Team</span>
         </footer>
     </div>
-    <script src="js/main.js"></script>
 </body>
 </html>

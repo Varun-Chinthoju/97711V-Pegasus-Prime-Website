@@ -7,45 +7,52 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <div class="aura aura-blue"></div>
+    <div class="aura aura-gold"></div>
+
     <div class="container">
-        <header class="header">
-            <a href="index.html" class="brand">97711V<span>//</span>PRIME</a>
-            <nav class="nav-links">
+        <nav>
+            <a href="index.html" class="brand">97711V<span> // </span>PRIME</a>
+            <div class="nav-links">
                 <a href="index.html" class="active">Overview</a>
                 <a href="build.html">Build</a>
                 <a href="code.html">Code</a>
                 <a href="outreach.html">Impact</a>
-            </nav>
-        </header>
+            </div>
+        </nav>
 
         <main>
-            <div class="tag">SYS.V5RC // ACTIVE</div>
-            <h1>Zephyr.</h1>
-            <p>Our 2025-2026 'Push Back' competitive entry. Engineered for consistent scoring and high-traction maneuverability. A masterclass in independent robotics.</p>
+            <section class="hero">
+                <span class="sys-tag">SYS.V5RC // ACTIVE</span>
+                <h1>Zephyr.</h1>
+                <p class="hero-p">Our 2025-2026 'Push Back' competitive entry. Engineered for consistent scoring and high-traction maneuverability. A masterclass in independent robotics.</p>
+            </section>
 
-            <div class="grid" style="margin-top: 4rem;">
-                <div class="grid-item">
-                    <h3>Win Rate</h3>
-                    <div class="stat-value blue">85.7%</div>
-                    <p style="font-size: 0.9rem;">12 Wins - 2 Losses</p>
+            <div class="dashboard-grid">
+                <div class="glass-panel">
+                    <div class="panel-label">Win Rate</div>
+                    <div class="data-large" style="color: var(--zephyr-blue);">85.7%</div>
+                    <div class="data-sub">12 Wins — 2 Losses</div>
                 </div>
-                <div class="grid-item">
-                    <h3>Skills High Score</h3>
-                    <div class="stat-value gold">245</div>
-                    <p style="font-size: 0.9rem;">Current Regional #1</p>
+                <div class="glass-panel">
+                    <div class="panel-label">Skills High Score</div>
+                    <div class="data-large" style="color: var(--prime-gold);">245</div>
+                    <div class="data-sub">Current Regional #1</div>
                 </div>
             </div>
 
-            <div class="placeholder-box">
-                [ INTERACTIVE CAD MODEL PLACEHOLDER ]
+            <div class="glass-panel" style="height: 500px; display: flex; align-items: center; justify-content: center; margin-bottom: 30px;">
+                <div class="panel-label" style="position: absolute; top: 40px; left: 40px;">Engineering Preview</div>
+                <span style="font-family: var(--font-mono); color: var(--text-dim); opacity: 0.5;">[ INTERACTIVE CAD MODEL PLACEHOLDER ]</span>
             </div>
         </main>
 
-        <footer class="footer">
+        <footer>
             <span>&copy; 2026 97711V Pegasus Prime.</span>
             <span>Independent VEX V5 Team</span>
         </footer>
     </div>
+
     <script src="js/main.js"></script>
 </body>
 </html>

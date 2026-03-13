@@ -7,47 +7,54 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <div class="aura aura-blue"></div>
+    <div class="aura aura-gold"></div>
+
     <div class="container">
-        <header class="header">
-            <a href="index.html" class="brand">97711V<span>//</span>PRIME</a>
-            <nav class="nav-links">
+        <nav>
+            <a href="index.html" class="brand">97711V<span> // </span>PRIME</a>
+            <div class="nav-links">
                 <a href="index.html">Overview</a>
                 <a href="build.html">Build</a>
                 <a href="code.html">Code</a>
                 <a href="outreach.html" class="active">Impact</a>
-            </nav>
-        </header>
+            </div>
+        </nav>
 
         <main>
-            <div class="tag">COMMUNITY // OUTREACH</div>
-            <h1>Impact Radius.</h1>
-            <p>Building hardware is only half the mission. We ensure that our resources, knowledge, and passion actively raise the standard for the entire region.</p>
+            <section class="hero">
+                <span class="sys-tag">COMMUNITY // OUTREACH</span>
+                <h1>Impact Radius.</h1>
+                <p class="hero-p">Building hardware is only half the mission. We ensure that our resources, knowledge, and passion actively raise the standard for the entire region.</p>
+            </section>
 
-            <div class="grid">
-                <div class="grid-item">
-                    <h3>Resource Distribution</h3>
-                    <div class="stat-value blue">&gt;$500</div>
-                    <p style="font-size: 0.95rem;">We've distributed C-channels, motors, and sensors to rookie teams across our region to ensure hardware isn't a barrier to entry.</p>
+            <div class="dashboard-grid">
+                <div class="glass-panel">
+                    <div class="panel-label">Donations</div>
+                    <div class="data-large" style="color: var(--accent-green);">&gt;$500</div>
+                    <div class="data-sub">C-Channels, motors, and sensors distributed to local rookie teams.</div>
                 </div>
-                <div class="grid-item">
-                    <h3>Educational Initiative</h3>
-                    <p style="font-size: 0.95rem; margin-top: 0.5rem;"><strong style="color: var(--text-main);">Inverted Pendulum:</strong> To demonstrate the power of control theory, we built a custom inverted pendulum. This engaging project is used in community workshops to teach students about PID logic.</p>
+                <div class="glass-panel">
+                    <div class="panel-label">Initiative</div>
+                    <div class="data-large" style="color: var(--zephyr-blue);">Pendulum</div>
+                    <div class="data-sub">Custom PID Inverted Pendulum demo used in community workshops.</div>
                 </div>
             </div>
 
-            <div style="margin-top: 5rem; border-top: 1px solid var(--border-color); padding-top: 3rem;">
-                <h2 style="margin-top: 0;">Mission Gallery</h2>
+            <div class="glass-panel" style="margin-top: 30px;">
+                <div class="panel-label">Mission Gallery</div>
                 <div id="outreach-gallery" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1rem; margin-top: 2rem;">
-                    <p style="color: var(--text-muted); font-family: var(--font-mono); font-size: 0.85rem;">> waiting for assets/gallery/ uploads...</p>
+                    <p style="color: var(--text-dim); font-family: var(--font-mono); font-size: 0.85rem;">> waiting for assets/gallery/ uploads...</p>
                 </div>
             </div>
         </main>
 
-        <footer class="footer">
+        <footer style="margin-top: 80px;">
             <span>&copy; 2026 97711V Pegasus Prime.</span>
             <span>Independent VEX V5 Team</span>
         </footer>
     </div>
+
     <script src="js/main.js"></script>
 </body>
 </html>

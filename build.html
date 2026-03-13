@@ -7,45 +7,49 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <div class="aura aura-blue"></div>
+    <div class="aura aura-gold"></div>
+
     <div class="container">
-        <header class="header">
-            <a href="index.html" class="brand">97711V<span>//</span>PRIME</a>
-            <nav class="nav-links">
+        <nav>
+            <a href="index.html" class="brand">97711V<span> // </span>PRIME</a>
+            <div class="nav-links">
                 <a href="index.html">Overview</a>
                 <a href="build.html" class="active">Build</a>
                 <a href="code.html">Code</a>
                 <a href="outreach.html">Impact</a>
-            </nav>
-        </header>
+            </div>
+        </nav>
 
         <main>
-            <div class="tag">HARDWARE // V3.2</div>
-            <h1>The Blueprint.</h1>
-            <p>Structural integrity meets rapid maneuverability. Every component on Zephyr is measured, cut, and placed with deliberate intent.</p>
+            <section class="hero">
+                <span class="sys-tag">HARDWARE // V3.2</span>
+                <h1>The Blueprint.</h1>
+                <p class="hero-p">Structural integrity meets rapid maneuverability. Every component on Zephyr is measured, cut, and placed with deliberate intent.</p>
+            </section>
 
-            <div class="grid">
-                <div class="grid-item">
-                    <h3>Drivetrain</h3>
-                    <div class="stat-value">6-Motor</div>
-                    <p style="font-size: 0.95rem;">450 RPM geared drive. Direct geared to minimize friction loss, providing high-torque pushing power without sacrificing traversal speed.</p>
+            <div class="dashboard-grid">
+                <div class="glass-panel">
+                    <div class="panel-label">Drivetrain</div>
+                    <div class="data-large">6-Motor</div>
+                    <div class="data-sub">450 RPM geared drive. High-torque output with liquid-smooth acceleration curves.</div>
                 </div>
-                <div class="grid-item">
-                    <h3>Intake</h3>
-                    <div class="stat-value">Flex-Wheel</div>
-                    <p style="font-size: 0.95rem;">Running at 600RPM for immediate, reliable game element acquisition. Geometry calculated for optimal compression.</p>
+                <div class="glass-panel">
+                    <div class="panel-label">Intake</div>
+                    <div class="data-large">Flex-Wheel</div>
+                    <div class="data-sub">Running at 600RPM for immediate, reliable game element acquisition. Geometry calculated for optimal compression.</div>
                 </div>
             </div>
 
-            <div class="placeholder-box" style="height: 400px;">
-                [ CAD RENDERINGS & PROTOTYPE GALLERY ]
+            <div class="glass-panel" style="height: 400px; display: flex; align-items: center; justify-content: center; margin-bottom: 30px;">
+                <span style="font-family: var(--font-mono); color: var(--text-dim); opacity: 0.5;">[ CAD RENDERINGS & PROTOTYPE GALLERY ]</span>
             </div>
         </main>
 
-        <footer class="footer">
+        <footer>
             <span>&copy; 2026 97711V Pegasus Prime.</span>
             <span>Independent VEX V5 Team</span>
         </footer>
     </div>
-    <script src="js/main.js"></script>
 </body>
 </html>
