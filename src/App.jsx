@@ -20,12 +20,22 @@ const tabs = [
 function App() {
   const [activeTab, setActiveTab] = useState('home');
 
-  // Load from hash on mount
+  // Handle hash changes
   useEffect(() => {
-    const hash = window.location.hash.replace('#', '');
-    if (hash && tabs.some(t => t.id === hash)) {
-      setActiveTab(hash);
-    }
+    const handleHashChange = () => {
+      const hash = window.location.hash.replace('#', '');
+      if (hash && tabs.some(t => t.id === hash)) {
+        setActiveTab(hash);
+      } else {
+        setActiveTab('home');
+      }
+    };
+
+    // Initial check
+    handleHashChange();
+
+    window.addEventListener('hashchange', handleHashChange);
+    return () => window.removeEventListener('hashchange', handleHashChange);
   }, []);
 
   const handleTabChange = (id) => {
@@ -47,19 +57,14 @@ function App() {
 
   return (
     <div className="min-h-screen relative">
-      {/* Dynamic Background Glows */}
-      <div className="bg-glow glow-1" />
-      <div className="bg-glow glow-2" />
-      <div className="bg-glow glow-3" />
-
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 px-8 py-6">
-        <div className="max-w-7xl mx-auto glass flex items-center justify-between px-8 py-4">
+        <div className="max-w-7xl mx-auto glass flex items-center justify-between px-8 py-4 border-slate-700/50">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 gradient-bg rounded-xl flex items-center justify-center font-bold text-xl">
+            <div className="w-10 h-10 gradient-bg rounded-xl flex items-center justify-center font-bold text-xl shadow-lg shadow-indigo-500/20">
               P
             </div>
-            <span className="font-extrabold text-2xl tracking-tight">
+            <span className="font-extrabold text-2xl tracking-tight text-white">
               Pegasus <span className="gradient-text">97711V</span>
             </span>
           </div>

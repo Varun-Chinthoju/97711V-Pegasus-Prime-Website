@@ -1,64 +1,90 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { motion } from 'framer-motion';
+
+const ASCII_LOGO = `
+ __________                                          __________        .__               
+ \\______   \\ ____   _________    ________ __  ______ \\______   \\_______|__| _____   ____  
+  |     ___// __ \\ / ___\\__  \\  /  ___/  |  \\/  ___/  |     ___/\\_  __ \\  |/     \\/ __ \\ 
+  |    |   \\  ___// /_/  > __ \\_\\___ \\|  |  / \\___ \\   |    |     |  | \\/  |  Y Y  \\  ___/ 
+  |____|    \\___  >___  (____  /____  >____//____  >  |____|     |__|  |__|__|_|  /\\___  >
+                \\/_____/     \\/     \\/           \\/                             \\/     \\/ 
+
+ ....................................................................................................
+ ....................................................................................................
+ ..............................................................:---:::...............................
+ ....:**==:......:##+-....................................:--===+===++++=#:..........................
+ .....:****+=+-...:*###**-..............................=+=:+**+*#+%%%#+##==:................ .......
+ .....:::=+++=-::==-:+*##***+:.........................==+*++**++*===#%####+=...-....................
+ .....-***+=++++=--==++=+*******+=:..................--=++**++=--:-*####*:-#*=-:-....................
+ .......:*++++=--=*#+=+***===**+####++-.............-++**#=*+-.:*#@*=:.*#*=-+++=.....................
+ .......:-::=++===--===+*#******=-+**##*++-:........==++#*#==-+%#%%*+=:-**+#+:..............  .......
+ ........=**++++====+++**##*+***##*#+==++*#*++=-...==*+#+*=+=*#**%@+++==+*+=--.............. ........
+ ...........-+***+=====++*#%#++*###*##%%##**=+###+.=***##**++%***%@%*####%#==:=......................
+ ............++++==--::=+*##%#########++#%#==*#**#-+**###*#+##=++*@@@%##%%%%++--.....................
+ .............:--=+**********#%%######**#%%###+*##*+=+#**##***-*==%%%%*.:=###*=+:....................
+ ................=+++++====++++*#%##########%%#++##**#**+*#**#+#=--%%##=...####*:....................
+ ...................:***+==-=+****#%##*=*###%%%%+-+##*:+#**#*#++=-:-#%+*-...=+=:.....................
+ .....................-=+***++++***####*++*#*##%%#==##*-:++%#%%#*+=-=**+=-...........................
+ ........................=****+*+**++*##%%##%#%%%%%*=*##**###*%#*+==:+++=:=.................. .......
+ ...........................++*****+=+***###%#**##%%%#=*#%+*###%*##+-.-*+-.-.........................
+ .............................:=#**++**+++**#######%%%##**+*###@##%#+=.=*#+=-........................
+ ............... ..................++**++*+++++=###%#%%%#*-+##%=--:::-==+%#*+-.......................
+ ...................................:--++++=***++**####%%#*##+=+*###*+=::=%%*+............... .......
+ ..........................................++++*++******-*#***#+==+*+-=*#+=*#*=......................
+ ............................................:=+==+****.=++=*#+++*::*+*+*%**##=:................. ...
+ ..............-=+++*++-............................::+++=-*#*=%**=-*+%#*%%**++-.....................
+ ..........--=--=+*#%#++*+=:.:-==----===-----::::-=+++##*+**%*=###**###*+%%#**=-......=++=:..........
+ ........=*+-:+#+#%%==+###**=+*#%%%#*=::--==#++===-#*+=*##%###+###**##%+*#*%##*+=-:-*%*+=*=:.........
+ ........+==##++%#=.....=###%#+===-..-#*-..:#-::::.=#**###%##%#*+*#**=*###=-:::-=+**%%%##@#=.........
+ ......:++*##**##:......:+*%+++##-+%*+==%*--*=::::::+%*##*+*%%##%%#######+==++**#####*==#%*=-.. .....
+ .....:++###**#*........++#++#+====-=**++%*#*#*#**###**##**#%#%%%#@#%**+*####*%%#*+:....-*#*-=.......
+ .....+*#***+#+-........+##*+#*%*++***#=*%%*#*%#######*++*%%%##%#***####*#@%#**=.........=*#*:=......
+ ....-*##=*+=#=.........+*#*+####**####=#%%###*@#####%%%%##***##%#*#%%##%@@@%%#*=-........-*#*--.....
+ ....+*#=-*-+#-.........+*%#+*##****##**##%%###@@%##########+++*##%#**##%%%%#*+*#*++-......=+**=:....
+ ....+##-:*++*-..........**%**+##*#%*+*%%*#%#####%%%#########*+=+=......:=+**####%%%#=+:...:+*%*=:...
+ ....==*==**+:...........:+#%%%#+++*#%%#*#@@@@@@%+==*+====---:.................-=%#*##+=....-*###:...
+ .....-=++***.............=#*##*****+##+%@@@@@%##-.............................:+####+-......+#*+....
+ .....--*+=+*.............=*%#%#++:-**+@@@@%%%%*=.................. ..........=+##*=..... .-#%#+=....
+ .....:=+++:=............=+###*===*#**%%%%%%%#*=........ ...................:+##*+-........-###*-....
+ ......=+#*=............++*%#++****+-#%%#%#%#*-............................:++**=...........+#=-.....
+ ......-+=**-.........-=*##++*##*=..+*%=##%*+:...........................+=###+=.............:+......
+ .......-+=-+-......-+*%%####*=....=+#*###+-.............................+###+:......................
+ ........:++:.....-+*++*#%#-......=#%%%#*-.......  .................=*=**#*=:........................
+ ..........++=....-***#*#=......:#*###%+...........................:##%*+=...........................
+ ............=+:...:*##%*=:.....-######=:..........................=#*+=...........................
+ ..............-:....-*#*+=......=###%##+==..........  ............--:...............................
+ ............ ........-*##=+.........+%#%#*=+-.................  ....................................
+ ......................:*##+=:.........:+*###++=:................................... ................
+ ........................+*#+=:...........:+**#*++=..................................................
+ ................. .......+*#++:....... .....-###%#+=........... ..  ............................ ...
+ ............ ....... ....:*##*==...............***##-....................................... .......
+ ..........................=#+*#*:...............:=##*=:.............................................
+ ....................... ...:*##*+..... ...........*##++=.................  ...... ......  ..........
+ .............................-##*=-... ...........*#%#++=................................... .......
+ .....  ......................:*%%*+=:..............:-----...........................................
+ ..............................*%%#+++:....................... ..................... ................
+ ....................................................................................................
+`;
+
+const FILES = {
+  'about.md': '# About Pegasus Prime\n\nTeam 97711V is based out of Pegasus High School. We focus on engineering excellence through robust design and advanced software integration. Our goal is to compete at the highest level of VEX Robotics.',
+  'specs.md': '# Robot Specifications\n\n- **Drivetrain:** 6-motor 360RPM direct drive\n- **Intake:** Single-motor side roller\n- **Flywheel:** 2-motor 3600RPM geared system\n- **Control:** Full Odometry with 3-wheel tracking',
+  'auton_logic.md': '# Autonomous Logic\n\nWe utilize a custom PID controller for lateral movement and heading correction. Our motion profile generation ensures smooth acceleration and deceleration curves for maximum accuracy.'
+};
 
 const COMMANDS = {
-  'help': 'Display list of all 50 available commands',
-  'clear': 'Clear the terminal screen',
-  'echo': 'Print the arguments to the terminal',
-  'whoami': 'Print the current user (alex)',
-  'date': 'Print current date and time',
-  'pwd': 'Print working directory',
-  'ls': 'List directory contents',
-  'cd': 'Change directory',
-  'cat': 'Read file contents',
-  'mkdir': 'Create directory',
-  'rm': 'Remove file',
-  'touch': 'Create empty file',
-  'sudo': 'Execute a command as superuser',
-  'ping': 'Ping a server',
-  'ifconfig': 'Display network configuration',
-  'top': 'Display system processes',
-  'history': 'Show command history',
-  'exit': 'Close the terminal session',
-  'reboot': 'Restart the system',
-  'shutdown': 'Power off',
-  'matrix': 'Enter the matrix',
-  'fortune': 'Print a random quote',
-  'cowsay': 'A cow says something',
-  'sl': 'Steam locomotive',
-  'neofetch': 'Show system information',
-  'robot_status': 'Check Pegasus Prime core systems',
-  'deploy_code': 'Push latest code to the brain',
-  'run_auton': 'Execute 15s autonomous routine',
-  'test_motors': 'Run motor diagnostics',
-  'cal_sensors': 'Calibrate vision and inertial sensors',
-  'log_errors': 'Display last 10 error codes',
-  'set_pid': 'Tune PID controller constants',
-  'fw_update': 'Update VEX brain firmware',
-  'battery': 'Check battery percentage and health',
-  'controller': 'Check connection to master controller',
-  'competition': 'Enter match mode',
-  'vision_feed': 'Stream camera feed',
-  'intake_test': 'Run intake forwards and backwards',
-  'flywheel_spin': 'Spin up flywheel to max RPM',
-  'drive_fwd': 'Drive forward 1 meter',
-  'turn_90': 'Turn 90 degrees right',
-  'read_odom': 'Read odometry coordinates',
-  'reset_odom': 'Zero out odometry',
-  'team_info': 'Print details about team 97711V',
-  'sponsor_us': 'Display sponsorship information',
-  'hello_world': 'Basic sanity check',
-  'rm_rf_slash': 'Do not try this at home',
-  'sudo_make_me_a_sandwich': 'Okay.',
-  'do_a_barrel_roll': 'Spin the interface',
-  'coffee': 'Brewing a fresh cup...'
+  'help': 'Display list of available commands',
+  'ls': 'List virtual files',
+  'cat [file]': 'Read a markdown file',
+  'pegasus': 'Show the Pegasus Prime logo',
+  'clear': 'Clear the screen',
+  'whoami': 'Show current user',
+  'robot_status': 'Diagnostics report',
+  'exit': 'Close session'
 };
 
 const Terminal = () => {
   const [history, setHistory] = useState([]);
   const [input, setInput] = useState('');
-  const [commandHistory, setCommandHistory] = useState([]);
-  const [historyIdx, setHistoryIdx] = useState(-1);
   const bottomRef = useRef(null);
   const inputRef = useRef(null);
 
@@ -67,136 +93,94 @@ const Terminal = () => {
   }, [history]);
 
   useEffect(() => {
-    // Run help on start
-    processCommand('help');
+    printToTerminal("Welcome to Pegasus Prime OS v2.0. Type 'pegasus' for the logo or 'help' to start.");
     inputRef.current?.focus();
   }, []);
 
+  const printToTerminal = (text, type = 'output') => {
+    setHistory(prev => [...prev, { type, text }]);
+  };
+
   const processCommand = (cmdStr) => {
     const rawInput = cmdStr.trim();
-    if (!rawInput && cmdStr !== 'help') return;
+    if (!rawInput) return;
 
-    const newHistory = [...history, { type: 'input', text: rawInput }];
-    
-    if (rawInput) {
-      setCommandHistory(prev => [...prev, rawInput]);
-      setHistoryIdx(-1);
-    }
-
-    const parts = rawInput.toLowerCase().split(' ');
-    const cmd = parts[0];
-    const args = parts.slice(1);
-
-    let output = '';
+    printToTerminal(rawInput, 'input');
+    const [cmd, ...args] = rawInput.toLowerCase().split(' ');
 
     switch (cmd) {
       case 'help':
-        output = 'Available Commands:\n===================\n' + 
-                 Object.entries(COMMANDS).map(([k, v], i) => 
-                   `${(i + 1).toString().padStart(2, '0')}. ${k.padEnd(25, ' ')} - ${v}`
-                 ).join('\n');
+        let helpText = 'Available Commands:\n\n' + Object.entries(COMMANDS).map(([k, v]) => `${k.padEnd(20)} - ${v}`).join('\n');
+        printToTerminal(helpText);
+        break;
+      case 'ls':
+        printToTerminal(Object.keys(FILES).join('  '));
+        break;
+      case 'cat':
+        const fileName = args[0];
+        if (FILES[fileName]) {
+          printToTerminal(FILES[fileName]);
+        } else {
+          printToTerminal(`cat: ${fileName}: No such file or directory`);
+        }
+        break;
+      case 'pegasus':
+      case 'prime':
+      case 'pegasus_prime':
+        printToTerminal(ASCII_LOGO);
         break;
       case 'clear':
         setHistory([]);
-        return;
+        break;
       case 'whoami':
-        output = 'alex (Captain of 97711V)';
-        break;
-      case 'date':
-        output = new Date().toString();
-        break;
-      case 'ls':
-        output = 'auton.cpp  main.cpp  include/  src/  pid_tuner.py  secret_strats.txt';
+        printToTerminal('alex@pegasus-prime');
         break;
       case 'robot_status':
-        output = 'Connecting to Brain...\nBrain: ONLINE\nBattery: 87%\nMotors: ALL NOMINAL\nSensors: CALIBRATED';
-        break;
-      case 'do_a_barrel_roll':
-        document.body.style.transition = "transform 2s";
-        document.body.style.transform = "rotate(360deg)";
-        setTimeout(() => {
-            document.body.style.transition = "";
-            document.body.style.transform = "";
-        }, 2000);
-        output = 'Wheeeeeeee!';
-        break;
-      case 'matrix':
-        output = 'Wake up, Neo...\nThe matrix has you...\nFollow the white rabbit.';
+        printToTerminal('SYSTEMS: NOMINAL\nBATTERY: 94%\nMOTORS: 8/8 ONLINE\nIMU: STABLE');
         break;
       default:
-        if (COMMANDS[cmd]) {
-          output = `Executing ${cmd}...\n(Simulated command finished successfully)`;
-        } else {
-          output = `zsh: command not found: ${cmd}`;
-        }
+        printToTerminal(`zsh: command not found: ${cmd}`);
     }
-
-    setHistory([...newHistory, { type: 'output', text: output }]);
-  };
-
-  const handleKeyDown = (e) => {
-    if (e.key === 'Enter') {
-      processCommand(input);
-      setInput('');
-    } else if (e.key === 'ArrowUp') {
-      e.preventDefault();
-      if (commandHistory.length > 0) {
-        const newIdx = historyIdx === -1 ? commandHistory.length - 1 : Math.max(0, historyIdx - 1);
-        setHistoryIdx(newIdx);
-        setInput(commandHistory[newIdx]);
-      }
-    } else if (e.key === 'ArrowDown') {
-      e.preventDefault();
-      if (historyIdx !== -1) {
-        const newIdx = historyIdx + 1;
-        if (newIdx >= commandHistory.length) {
-          setHistoryIdx(-1);
-          setInput('');
-        } else {
-          setHistoryIdx(newIdx);
-          setInput(commandHistory[newIdx]);
-        }
-      }
-    }
+    setInput('');
   };
 
   return (
-    <div className="w-full h-[80vh] bg-[#1e1e1e] rounded-xl overflow-hidden shadow-2xl flex flex-col font-mono border border-white/10">
-      <div className="bg-[#333] px-4 py-2 flex items-center justify-between">
+    <div className="w-full h-[80vh] bg-slate-950 rounded-xl overflow-hidden shadow-2xl flex flex-col font-mono border border-indigo-500/30">
+      <div className="bg-slate-900 px-4 py-2 flex items-center justify-between border-b border-indigo-500/20">
         <div className="flex gap-2">
-          <div className="w-3 h-3 rounded-full bg-[#ff5f56]" />
-          <div className="w-3 h-3 rounded-full bg-[#ffbd2e]" />
-          <div className="w-3 h-3 rounded-full bg-[#27c93f]" />
+          <div className="w-3 h-3 rounded-full bg-red-500/50" />
+          <div className="w-3 h-3 rounded-full bg-amber-500/50" />
+          <div className="w-3 h-3 rounded-full bg-emerald-500/50" />
         </div>
-        <span className="text-gray-400 text-sm">alex@pegasus-prime: ~ (zsh)</span>
+        <span className="text-slate-500 text-xs uppercase tracking-widest font-bold">Pegasus Terminal</span>
         <div className="w-12" />
       </div>
       
       <div 
-        className="flex-grow p-6 overflow-y-auto text-[#00ff00] leading-relaxed whitespace-pre-wrap"
+        className="flex-grow p-6 overflow-y-auto text-indigo-300 leading-relaxed whitespace-pre"
         onClick={() => inputRef.current?.focus()}
       >
         {history.map((line, i) => (
-          <div key={i} className="mb-1">
+          <div key={i} className="mb-2">
             {line.type === 'input' ? (
               <div className="flex gap-2">
-                <span className="text-cyan-400">➜  ~</span>
+                <span className="text-emerald-500 font-bold">➜</span>
                 <span className="text-white">{line.text}</span>
               </div>
             ) : (
-              <div className="text-[#00ff00] opacity-90">{line.text}</div>
+              <div className="text-indigo-200/90">{line.text}</div>
             )}
           </div>
         ))}
         <div className="flex gap-2 items-center">
-          <span className="text-cyan-400">➜  ~</span>
+          <span className="text-emerald-500 font-bold">➜</span>
           <input
             ref={inputRef}
             type="text"
             className="bg-transparent border-none outline-none text-white flex-grow font-mono"
             value={input}
             onChange={(e) => setInput(e.target.value)}
-            onKeyDown={handleKeyDown}
+            onKeyDown={(e) => e.key === 'Enter' && processCommand(input)}
             autoFocus
             spellCheck={false}
           />
